@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  knight-todo:
+    restart: always
+    image: maksymfedosov/knightuser:latest
+    ports:
+      - "8060:8060"
