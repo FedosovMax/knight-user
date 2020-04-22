@@ -12,5 +12,7 @@ public interface UserGateway {
 
     Optional<UserVO> findById(String userId);
 
+    Optional<UserVO> findByLogin(String login);
+
     void deleteById(String userId);
 }

@@ -35,6 +35,11 @@ public class UserGatewayImpl implements UserGateway {
     }
 
     @Override
+    public Optional<UserVO> findByLogin(String login) {
+        return userRepository.findByLogin(login).map(userMapper::toUserVO);
+    }
+
+    @Override
     public void deleteById(String userId) {
         userRepository.deleteById(userId);
     }
