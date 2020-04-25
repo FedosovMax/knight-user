@@ -5,7 +5,7 @@ import com.knightuser.rest.request.UserRequestDto;
 import com.knightuser.rest.response.UserResponseDto;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = RestRoleMapper.class)
 public interface RestUserMapper {
 
     UserVO toUserVO(UserRequestDto userRequestDto);
